@@ -15,13 +15,13 @@ options.forEach(option => {
         }, 800);
         
         const choice = option.innerText.toLowerCase(); 
-        player.src = `/Assets/${choice}Player.png`; 
+        player.src = `./Assets/${choice}Player.png`; 
 
         const pcChoices = ["stone", "paper", "scissors"];
         let arrayNo = Math.floor(Math.random() * 3);
         const pcChoice = pcChoices[arrayNo];
         console.log("Computer chose:", pcChoice);
-        computer.src = `/Assets/${pcChoice}Computer.png`;
+        computer.src = `./Assets/${pcChoice}Computer.png`;
 
         let cPoints = parseInt(computerPoints.innerHTML);
         let pPoints = parseInt(playerPoints.innerHTML);
