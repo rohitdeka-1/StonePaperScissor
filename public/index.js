@@ -12,12 +12,9 @@ options.forEach(option => {
         setTimeout(() => {
             computer.classList.remove("shakeComputer");
             player.classList.remove("shakePlayer");
-        }, 800);
-        
-        const choice = option.innerText.toLowerCase(); 
-        player.src = `./Assets/${choice}Player.png`; 
-
-        const pcChoices = ["stone", "paper", "scissors"];
+            const choice = option.innerText.toLowerCase(); 
+            player.src = `./Assets/${choice}Player.png`;
+            const pcChoices = ["stone", "paper", "scissors"];
         let arrayNo = Math.floor(Math.random() * 3);
         const pcChoice = pcChoices[arrayNo];
         console.log("Computer chose:", pcChoice);
@@ -42,5 +39,6 @@ options.forEach(option => {
         
         computerPoints.innerHTML = cPoints;
         playerPoints.innerHTML = pPoints;
+        }, 650);
     });
 });
